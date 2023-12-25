@@ -16,7 +16,7 @@ const Todo = ({todo}) => {
   }
   return (
     <div>
-      <div className='flex row gap-2 items-center py-4 border-b-2' key={todo.id}>
+      <div className='flex row gap-2 items-center py-2 border-b-2' key={todo.id}>
         <div>
             <input 
               className='cursor-pointer'
@@ -39,7 +39,6 @@ const Todo = ({todo}) => {
           onClick={()=>handleDelete(todo.id)}
           className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-1 text-center ml-4">DELETE</button>
       </div>
-      
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import './App.css'
-import Footer from './component/Footer'
+import Filter from './component/Filter'
 import Header from './component/Header'
 import Navbar from './component/Navbar'
 import TodoList from './component/TodoList'
@@ -10,13 +10,13 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className='w-1/2 bg-slate-100 mt-16 mx-auto shadow-lg'>
+      <div className='w-3/4 bg-slate-100 mt-16 mx-auto shadow-lg'>
 
         <Navbar/>
         <div className='p-8'>
           <Header/>
           <TodoList/>
-          <Footer/>
+          <Filter/>
         </div>
           
       </div>

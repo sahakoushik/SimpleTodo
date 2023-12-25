@@ -4,8 +4,9 @@ import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, COLORS, DELETED, TOGGLED } from ".
 import  initialState from "./initialState";
 
 const idCreator = (todos) => {
-    const maxId = todos.reduce((maxId,current)=>{ Math.max(current.id,maxId), -1})
-    return maxId;
+    const maxId = todos.reduce((maxId,current)=> Math.max(maxId, current.id), -1)
+    console.log("asd",maxId);
+    return maxId + 1;
 } 
 const todoReducer = (state = initialState,action) =>{
     switch (action.type) {
