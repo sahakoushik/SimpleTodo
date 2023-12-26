@@ -1,12 +1,12 @@
 const initialState = [
     {
         id:1,
-        text: "Learn React JS",
+        text: "Prepare for interview",
         completed: true,
     },
     {
         id:2,
-        text: "My Dreams are not happening",
+        text: "Clear all the concepts",
         completed: false,
         color:"red"
     }

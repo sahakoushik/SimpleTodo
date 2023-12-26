@@ -1,5 +1,5 @@
 /* eslint-disable no-case-declarations */
-import { COLORCHANGE, STATUSCHANGE } from "./actionTypes";
+import { STATUSCHANGE } from "./actionTypes";
 import initialState from "./initialState";
 const filterReducer= (state = initialState, action) =>{
     switch (action.type) {
@@ -8,27 +8,6 @@ const filterReducer= (state = initialState, action) =>{
                 ...state,
                 status: action.payload,
             };
-            case COLORCHANGE:
-                const { color, changeType } = action.payload;
-    
-                switch (changeType) {
-                    case "added":
-                        return {
-                            ...state,
-                            colors: [...state.colors, color],
-                        };
-    
-                    case "removed":
-                        return {
-                            ...state,
-                            colors: state.colors.filter(
-                                (existingColor) => existingColor !== color
-                            ),
-                        };
-    
-                    default:
-                        return state;
-                }
         default:
             return state;
     }

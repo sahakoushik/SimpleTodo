@@ -1,6 +1,6 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-undef */
-import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, COLORS, DELETED, TOGGLED } from "./actionTypes";
+import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, COLORS, DELETED, TOGGLED, EDIT } from "./actionTypes";
 import  initialState from "./initialState";
 
 const idCreator = (todos) => {
@@ -19,6 +19,16 @@ const todoReducer = (state = initialState,action) =>{
                     completed:false,
                 }
             ];
+            case EDIT:
+                return  state.map((todo)=>{
+                    if(todo.id === action.payload.todoId){
+                        return {
+                            ...todo,
+                            text: action.payload.todoText
+                        }
+                    }
+                    return todo
+            })   
         case DELETED:
             return state.filter((item)=> item.id !== action.payload)
         case TOGGLED:

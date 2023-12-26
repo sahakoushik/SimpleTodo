@@ -1,6 +1,5 @@
 import './App.css'
 import Filter from './component/Filter'
-import Header from './component/Header'
 import Navbar from './component/Navbar'
 import TodoList from './component/TodoList'
 import {Provider} from 'react-redux'
@@ -14,7 +13,6 @@ function App() {
 
         <Navbar/>
         <div className='p-8'>
-          <Header/>
           <TodoList/>
           <Filter/>
         </div>

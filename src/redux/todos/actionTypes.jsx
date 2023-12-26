@@ -1,4 +1,5 @@
 export const ADDED = "todos/added";
+export const EDIT = "todos/edit";
 export const TOGGLED = "todos/toggoled";
 export const COLORS = "todos/colors";
 export const DELETED = "todos/deleted";
